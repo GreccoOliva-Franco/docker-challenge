@@ -14,6 +14,8 @@ The first section is to create a simple Node.js application under the folder `no
 
 ### Solution: Branch `section-1`
 
+Requirements: Node.js, npm
+
 You can set your `.env` file or use the default values will solve it either way. To test the solution, run the following commands:
 
 ```bash
@@ -28,6 +30,16 @@ npm run start
 The second section is to containerize the previous application. The application should be able to run on port on `3030`. This means that:
 
 - A GET request to `localhost:3030/status` should have the same response of the previous [section](#section-1-create-a-simple-nodejs-application).
+
+### Solution: Branch `section-2`
+
+Requirements: Docker.
+
+To test the solution, run the following commands:
+
+```bash
+docker run -d -p 3030:3000 francogrecco/node-server:production .
+```
 
 ## Section 3: Create a second server
 
@@ -65,3 +77,4 @@ The seventh section is to build a reverse proxy server with Nginx. This means th
 - A GET 'localhost:4040/status' should redirect to `localhost/server-2/status`.
 
 - Any other request should return a 404 error.
+
