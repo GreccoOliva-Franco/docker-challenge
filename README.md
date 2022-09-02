@@ -47,6 +47,19 @@ The third section is to create a second server under the folder `node-server-2` 
 
 - GET '/status' - should respond with a simple string: `"Hello from server 2. NodeJs server 2 is online"`
 
+### Solution: Branch `section-3`
+
+Requirements: Node.js, npm
+
+You can set your `.env` file or use the default values will solve it either way. To test the solution, run the following commands:
+
+```bash
+cd node-server-2
+npm install
+npm run build
+npm run start
+```
+
 ## Section 4: Containerize the second server
 
 The fourth section is to containerize the previous application. The application should be able to run on port on `4040`. This means that:
