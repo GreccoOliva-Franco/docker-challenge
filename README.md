@@ -83,6 +83,18 @@ The fifth section is to run both servers. This means that both conditions of the
 - A GET request to `localhost:3030/status` should have the same response of the previous [section 2](#section-2-containerize-the-application).
 - A GET request to `localhost:4040/status` should have the same response of the previous [section 4](#section-4-containerize-the-second-server).
 
+
+### Solution: Branch `section-5`
+
+Requirements: Docker
+
+To test the solution, run the following commands:
+
+```bash
+docker run -d -p 3030:3000 francogrecco/node-server:production
+docker run -d -p 4040:4000 francogrecco/node-server-2:production
+```
+
 ## Section 6: Run both servers with docker-compose
 
 The sixth section is to run both servers with docker-compose. This means that both conditions of the previous [section 5](#section-5-run-both-servers) should be met.
