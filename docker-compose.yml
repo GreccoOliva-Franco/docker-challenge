@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  server-1:
+    image: "francogrecco/node-server:production"
+    ports:
+      - "3030:3000"
+  
+  server-2:
+    image: "francogrecco/node-server-2:production"
+    ports:
+      - "4040:4000"
