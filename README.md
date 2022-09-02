@@ -29,10 +29,9 @@ The second section is to containerize the previous application. The application 
 
 - A GET request to `localhost:3030/status` should have the same response of the previous [section](#section-1-create-a-simple-nodejs-application).
 
-
 ## Section 3: Create a second server
 
-The third section is to create a second server under the folder `node-server-2` of this repository. The application should be able to run on port `4000` and should respond to the following routes: 
+The third section is to create a second server under the folder `node-server-2` of this repository. The application should be able to run on port `4000` and should respond to the following routes:
 
 - GET '/status' - should respond with a simple string: `"Hello from server 2. NodeJs server 2 is online"`
 
@@ -60,3 +59,9 @@ The seventh section is to build a reverse proxy server with Nginx. This means th
 - A GET request to `localhost/server-1/status` should have the same response of the previous [section 2](#section-2-containerize-the-application).
 
 - A GET request to `localhost/server-2/status` should have the same response of the previous [section 4](#section-4-containerize-the-second-server).
+
+- A GET 'localhost:3030/status' should redirect to `localhost/server-1/status`.
+
+- A GET 'localhost:4040/status' should redirect to `localhost/server-2/status`.
+
+- Any other request should return a 404 error.
