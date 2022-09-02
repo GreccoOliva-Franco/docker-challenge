@@ -71,3 +71,10 @@ The seventh section is to build a reverse proxy server with Nginx. This means th
 - A GET request to `localhost/server-1/status` should have the same response of the previous [section 2](#section-2-containerize-the-application).
 
 - A GET request to `localhost/server-2/status` should have the same response of the previous [section 4](#section-4-containerize-the-second-server).
+
+- A GET 'localhost:3030/status' should redirect to `localhost/server-1/status`.
+
+- A GET 'localhost:4040/status' should redirect to `localhost/server-2/status`.
+
+- Any other request should return a 404 error.
+
