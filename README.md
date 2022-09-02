@@ -12,6 +12,17 @@ The first section is to create a simple Node.js application under the folder `no
 
 - GET `/status` - should respond with a simple string: `"NodeJs server is online"`
 
+### Solution: Branch `section-1`
+
+You can set your `.env` file or use the default values will solve it either way. To test the solution, run the following commands:
+
+```bash
+cd node-server
+npm install
+npm run build
+npm run start
+```
+
 ## Section 2: Containerize the application
 
 The second section is to containerize the previous application. The application should be able to run on port on `3030`. This means that:
