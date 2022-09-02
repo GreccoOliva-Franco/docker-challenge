@@ -66,6 +66,16 @@ The fourth section is to containerize the previous application. The application 
 
 - A GET request to `localhost:4040/status` should have the same response of the previous [section](#section-3-create-a-second-server).
 
+### Solution: Branch `section-4`
+
+Requirements: Docker
+
+To test the solution, run the following commands:
+
+```bash
+docker run -d -p 4040:4000 francogrecco/node-server-2:production
+```
+
 ## Section 5: Run both servers
 
 The fifth section is to run both servers. This means that both conditions of the previous [section 2](#section-2-containerize-the-application) and [section 4](#section-4-containerize-the-second-server) should be met:
@@ -90,4 +100,3 @@ The seventh section is to build a reverse proxy server with Nginx. This means th
 - A GET 'localhost:4040/status' should redirect to `localhost/server-2/status`.
 
 - Any other request should return a 404 error.
-
