@@ -14,6 +14,8 @@ The first section is to create a simple Node.js application under the folder `no
 
 ### Solution: Branch `section-1`
 
+Requirements: Node.js, npm
+
 You can set your `.env` file or use the default values will solve it either way. To test the solution, run the following commands:
 
 ```bash
@@ -29,10 +31,19 @@ The second section is to containerize the previous application. The application 
 
 - A GET request to `localhost:3030/status` should have the same response of the previous [section](#section-1-create-a-simple-nodejs-application).
 
+### Solution: Branch `section-2`
+
+Requirements: Docker.
+
+To test the solution, run the following commands:
+
+```bash
+docker run -d -p 3030:3000 francogrecco/node-server:production .
+```
 
 ## Section 3: Create a second server
 
-The third section is to create a second server under the folder `node-server-2` of this repository. The application should be able to run on port `4000` and should respond to the following routes: 
+The third section is to create a second server under the folder `node-server-2` of this repository. The application should be able to run on port `4000` and should respond to the following routes:
 
 - GET '/status' - should respond with a simple string: `"Hello from server 2. NodeJs server 2 is online"`
 
